@@ -1,0 +1,5 @@
+ApplicationAppBundle_homepage:
+    path:     /
+    defaults: { _controller: "ApplicationAppBundle:Page:index" }
+    requirements:
+         methods:  GET|POST
