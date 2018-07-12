@@ -7,6 +7,7 @@
             {% stylesheets '@bootstrap_css' %}
                 <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
             {% endstylesheets %}
+            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}"/>
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
@@ -28,6 +29,9 @@
             {% javascripts '@jquery' '@bootstrap_js' %}
                 <script type="text/javascript" src="{{ asset_url }}"></script>
             {% endjavascripts %}
+            <script type="text/javascript" src="{{ asset('js/jquery.easing.min.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/jquery.scrollify.min.js') }}"></script>
         {% endblock %}
     </body>
 </html>
