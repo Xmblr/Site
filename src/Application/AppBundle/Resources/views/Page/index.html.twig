@@ -1,5 +1,7 @@
 {% extends '@ApplicationApp/layout.html.twig' %}
 
+
+
 {% block body %}
     <div class="top-panel-absolute">
         <div class="top-panel-inner">
@@ -39,6 +41,34 @@
             <div class="col-md-8" style="padding-top: 10%; padding-bottom: 10%;">
                 <h2 style="color: #FFD700;">Career in Fabros</h2>
                 <p style="color: #FFD700;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="callback-header">
+                    <a class="button-log" href="#win3" style="margin-left: 10px;"><i class="fa fa-phone"
+                                                                                     aria-hidden="true"></i>
+                        Заказать звонок</a>
+                </div>
+                <a href="#x" class="overlay" id="win3">
+                </a>
+                <div class="popup" style="max-width: 500px;">
+                    <div class="section bg-gray-light container-fluid">
+                        <h2 class="m-b-20">Заказ обратного звонка</h2>
+                        <div class="container-fluid">
+
+                            {{ form_start(callform, { 'action': path('ApplicationAppBundle_confirm'), 'method': 'POST' }) }}
+                            {{ form_errors(callform) }}
+
+                            <div class="form-group">
+                                {{ form_widget(callform.name, {'attr':{'class':'input-log','placeholder':'Как вас зовут?'}}) }}
+                            </div>
+                            <div class="form-group">
+                                {{ form_widget(callform.phone, {'attr':{'class':'input-log','placeholder':'Номер телефона'}}) }}
+                            </div>
+                            <input type="submit" class="button-log" value="Отправить">
+                            {{ form_end(callform) }}
+                        </div>
+                    </div>
+
+                    <a class="close" title="Закрыть" href="#close"></a>
+                </div>
             </div>
         </div>
     </section>

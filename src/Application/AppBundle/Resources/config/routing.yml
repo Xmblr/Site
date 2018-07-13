@@ -3,3 +3,9 @@ ApplicationAppBundle_homepage:
     defaults: { _controller: "ApplicationAppBundle:Page:index" }
     requirements:
          methods:  GET|POST
+
+ApplicationAppBundle_confirm:
+    path:     /confirm
+    defaults: { _controller: "ApplicationAppBundle:Page:confirm" }
+    requirements:
+         methods:  GET|POST
