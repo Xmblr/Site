@@ -3,39 +3,72 @@
 {% block body %}
     <div class="top-panel-absolute">
         <div class="top-panel-inner">
-            <a class="top-panel-back-url" href="http://pcvector.net/scripts/scrollup/456-scrollify-uskoritel-prokrutki-kolesika-myshi.html">
-                <div class="top-panel-logo" title="Назад к статье"></div>
+            <a class="top-panel-back-url">
+                <div class="top-panel-logo"></div>
             </a>
         </div>
     </div>
 
-    <section class="panel one" data-section-name="one">
-        <div class="inner">
-            <h1>Первый блок</h1>
+    {#<section class="panel one" data-section-name="one">#}
+        {#<div class="inner">#}
+            {#<h1>Первый блок</h1>#}
+        {#</div>#}
+    {#</section>#}
+
+    <section class="panel two" data-section-name="two" id="about" style="background-image: url('/images/office.png'); background-size: cover;">
+
+            <div class="container">
+            <div class="col-md-8" style="padding-top: 10%; padding-bottom: 10%;">
+                <h2 style="color: white;">About Us</h2>
+                <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            </div>
+    </section>
+
+    <section class="panel three" data-section-name="three" id="products" style="background-image: url('/images/products.png'); background-size: cover;">
+        <div class="container">
+            <div class="col-md-8" style="padding-top: 10%; padding-bottom: 10%;">
+                <h2 style="color: #6f42c1;">Fabros Products</h2>
+                <p style="color: #6f42c1;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
         </div>
     </section>
 
-    <section class="panel two" data-section-name="two">
-        <div class="inner">
-            <h1>Второй блок</h1>
+    <section class="panel four" data-section-name="four" id="career" style="background-image: url('/images/people.png'); background-size: cover;">
+        <div class="container">
+            <div class="col-md-8" style="padding-top: 10%; padding-bottom: 10%;">
+                <h2 style="color: #FFD700;">Career in Fabros</h2>
+                <p style="color: #FFD700;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
         </div>
     </section>
 
-    <section class="panel three" data-section-name="three">
-        <div class="inner">
-            <h1>Третий блок</h1>
+    <section class="panel five" data-section-name="five" id="contacts" style="background-image: url('/images/rivera.png'); background-size: cover;">
+            <div class="container">
+                <div class="col-md-8" style="padding-top: 10%; padding-bottom: 10%;">
+                    <h2 style="color: #6f42c1; ">Contacts</h2>
+                    <p style="color: #6f42c1; font-weight: 600;">Belarus, Minsk, Pobediteley, 106-300</br>
+                    <a href="tel:+375447770000" style="color: #6f42c1; font-weight: 600;">+375 (44) 777 0000</a></br>
+                        mail@fabros.com
+                    </p>
+                </div>
+            </div>
+        <div class="container-fluid footer-mobile" style="background-color: black; position: absolute; bottom: 0;">
+            <div class="container">
+            <div class="rd-navbar-brand" style="display: inline-block; vertical-align: middle;"><a class="brand-name" href="/">FABROS</a></div>
+            <ul class="rd-navbar-nav" style="display: inline-block; vertical-align: middle; margin-left: 20px;">
+                <li class="rd-navbar--has-dropdown" style="display: inline-block; color: white; margin-right: 10px; font-size: 13px;"><a
+                            data-section-name="two">Terms of use</a>
+                </li>
+                <li class="rd-navbar--has-dropdown" style="display: inline-block; color: white; margin-right: 10px; font-size: 13px;"><a
+                            data-section-name="three">Privacy Policy</a>
+                </li>
+                <li class="rd-navbar--has-dropdown" style="display: inline-block; color: white; margin-right: 10px; font-size: 13px;"><a
+                            data-section-name="four">Cookie Policy</a>
+                </li>
+            </ul>
+            </div>
         </div>
-    </section>
 
-    <section class="panel four" data-section-name="four">
-        <div class="inner">
-            <h1>Четвёртый блок</h1>
-        </div>
-    </section>
-
-    <section class="panel five" data-section-name="five">
-        <div class="inner">
-            <h1>Пятый блок</h1>
-        </div>
     </section>
 {% endblock %}

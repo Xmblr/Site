@@ -1,37 +1,405 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}
-            {% stylesheets '@bootstrap_css' %}
-                <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
-            {% endstylesheets %}
-            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}"/>
-        {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8"/>
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    {% block stylesheets %}
+        {% stylesheets '@bootstrap_css' %}
+            <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/fddb9b6_part_1.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/style.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/style-1.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/animate.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('font/font-awesome/css/font-awesome.min.css') }}"/>
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
+    <script type="text/javascript" src="{{ asset('js/jquery-1.10.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
+</head>
+<body>
 
-        {% block header %}
+{% block header %}
 
-        {% endblock %}
+    <header class="section page-header breadcrumbs-custom-wrap panel one" data-section-name="one" id="home">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap rd-navbar-default" style="height: 77.6px;">
+            <nav class="rd-navbar rd-navbar-original rd-navbar-static" data-layout="rd-navbar-fixed"
+                 data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
+                 data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fullwidth"
+                 data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-md-stick-up-offset="2px"
+                 data-lg-stick-up-offset="2px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true"
+                 data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                <div class="rd-navbar-inner container">
+                    <!-- RD Navbar Panel-->
+                    <div class="rd-navbar-panel">
+                        <!-- RD Navbar Toggle-->
+                        <button class="rd-navbar-toggle toggle-original" data-rd-navbar-toggle=".rd-navbar-nav-wrap">
+                            <span></span></button>
+                        <!-- RD Navbar Brand-->
+                        <div class="rd-navbar-brand"><a class="brand-name" href="/">FABROS</a></div>
+                    </div>
+                    <div class="rd-navbar-aside-right">
+                        <div class="rd-navbar-nav-wrap toggle-original-elements">
+                            <!-- RD Navbar Nav-->
+                            <ul class="rd-navbar-nav">
+                                <li class="rd-navbar--has-dropdown active"><a href="#home">Home</a>
+                                </li>
+                                <li class="rd-navbar--has-dropdown"><a href="#about">About</a>
+                                </li>
+                                <li class="rd-navbar--has-dropdown"><a href="#products">Products</a>
+                                </li>
+                                <li class="rd-navbar--has-dropdown"><a href="#career">Career</a>
+                                </li>
+                                <li class="rd-navbar--has-dropdown"><a href="#contacts">Contacts</a>
+                                </li>
+                            </ul>
+                            <a class="button button-xs button-default-outline button-nina contacts-header"
+                               href="/" target="_blank"><span
+                                        style="transition: opacity 0.22s 0s, transform 0.22s 0s, color 0.22s;">Н</span><span
+                                        style="transition: opacity 0.22s 0.03s, transform 0.22s 0.03s, color 0.22s;">а</span><span
+                                        style="transition: opacity 0.22s 0.09s, transform 0.22s 0.09s, color 0.22s;"></span><span
+                                        style="transition: opacity 0.22s 0.12s, transform 0.22s 0.12s, color 0.22s;">Р</span><span
+                                        style="transition: opacity 0.22s 0.15s, transform 0.22s 0.15s, color 0.22s;">у</span><span
+                                        style="transition: opacity 0.22s 0.18s, transform 0.22s 0.18s, color 0.22s;">с</span><span
+                                        style="transition: opacity 0.22s 0.21s, transform 0.22s 0.21s, color 0.22s;">с</span><span
+                                        style="transition: opacity 0.22s 0.24s, transform 0.22s 0.24s, color 0.22s;">к</span><span
+                                        style="transition: opacity 0.22s 0.27s, transform 0.22s 0.27s, color 0.22s;">и</span><span
+                                        style="transition: opacity 0.22s 0.3s, transform 0.22s 0.3s, color 0.22s;">й</span><span
+                                        class="button-original-content"
+                                        style="transition: background 0.22s, color 0.22s, transform 0.22s 0.33s;">На русский</span></a>
+                        </div>
+                        <div class="rd-navbar-collapse-toggle toggle-original"
+                             data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+                        <div class="rd-navbar-aside-right-inner rd-navbar-collapse toggle-original-elements">
+                            {#<!-- RD Navbar Search-->#}
+                            {#<div class="rd-navbar-search toggle-original-elements"><a#}
+                            {#class="rd-navbar-search-toggle toggle-original"#}
+                            {#data-rd-navbar-toggle=".rd-navbar-search" href="#"><span></span></a>#}
+                            {#<form class="rd-search" action="search-results.html"#}
+                            {#data-search-live="rd-search-results-live" method="GET">#}
+                            {#<div class="form-wrap">#}
+                            {#<label class="form-label form-label rd-input-label"#}
+                            {#for="rd-navbar-search-form-input">Search...</label>#}
+                            {#<input class="rd-navbar-search-form-input form-input"#}
+                            {#id="rd-navbar-search-form-input" type="text" name="s" autocomplete="off">#}
+                            {#<div class="rd-search-results-live cleared"></div>#}
+                            {#</div>#}
+                            {#<button class="rd-search-form-submit mdi mdi-magnify"></button>#}
+                            {#</form>#}
+                            {#</div>#}
+                            <p class="contacts-header" style="color: #fff; font-weight: 600; padding-left: 10px;">Belarus, Minsk, Pobediteley, 106-300</br>
+                                <a href="tel:+375447770000" style="color: #fff; font-weight: 600;">+375 (44) 777 0000</a></br>
+                                mail@fabros.com
+                            </p>
+                            <a class="button button-xs button-default-outline button-nina header-desktop"
+                               href="/" target="_blank"><span
+                                        style="transition: opacity 0.22s 0s, transform 0.22s 0s, color 0.22s;">Н</span><span
+                                        style="transition: opacity 0.22s 0.03s, transform 0.22s 0.03s, color 0.22s;">а</span><span
+                                        style="transition: opacity 0.22s 0.09s, transform 0.22s 0.09s, color 0.22s;"></span><span
+                                        style="transition: opacity 0.22s 0.12s, transform 0.22s 0.12s, color 0.22s;">Р</span><span
+                                        style="transition: opacity 0.22s 0.15s, transform 0.22s 0.15s, color 0.22s;">у</span><span
+                                        style="transition: opacity 0.22s 0.18s, transform 0.22s 0.18s, color 0.22s;">с</span><span
+                                        style="transition: opacity 0.22s 0.21s, transform 0.22s 0.21s, color 0.22s;">с</span><span
+                                        style="transition: opacity 0.22s 0.24s, transform 0.22s 0.24s, color 0.22s;">к</span><span
+                                        style="transition: opacity 0.22s 0.27s, transform 0.22s 0.27s, color 0.22s;">и</span><span
+                                        style="transition: opacity 0.22s 0.3s, transform 0.22s 0.3s, color 0.22s;">й</span><span
+                                        class="button-original-content"
+                                        style="transition: background 0.22s, color 0.22s, transform 0.22s 0.33s;">На русский</span></a>
+                        </div>
 
-        {% block body %}
 
-        {% endblock %}
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Breadcrumbs-->
 
-        {% block footer %}
 
-        {% endblock %}
 
-        {% block javascripts %}
-            {% javascripts '@jquery' '@bootstrap_js' %}
-                <script type="text/javascript" src="{{ asset_url }}"></script>
-            {% endjavascripts %}
-            <script type="text/javascript" src="{{ asset('js/jquery.easing.min.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-            <script type="text/javascript" src="{{ asset('js/jquery.scrollify.min.js') }}"></script>
-        {% endblock %}
-    </body>
+        <div class="apps">
+            <div class="boxer_slider" id="newslide_wrapper">
+                <div class="new_slider new_slider_transform" id="newslide"
+                     style="transform: translate3d(-4406.5px, 0px, 0px) scale(0.85); width: 7000px; visibility: visible;">
+
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/yatzy_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+
+                        <img src="/images/yatzy_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/farkle_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/farkle_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/connect_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/connect_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/colors_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/colors_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/lines_feat.png'); background-size: contain;">#}
+
+                        {#</div>#}
+                        <img src="/images/lines_feat.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $('button#choose_apps_platform').on('click', function(){
+                var isOsCookie = false;
+                if (!isOsCookie) {
+                    createCookie('apps_for', 'all', 7);
+                } else {
+                    eraseCookie('apps_for');
+                }
+                window.location = '';
+            });
+        </script>
+
+
+        <script>
+            (function ($) {
+                $.event.special.scrollHz = {
+                    delay: 100,
+                    bindType: 'mousewheel',
+                    delegateType: 'mousewheel',
+                    handle: function (event, delta, deltaX, deltaY) {
+                        if ((Math.abs(deltaY) <= 0.05) && (Math.abs(deltaX) > 0)) {
+                            event.preventDefault();
+                            event.type = 'scrollHz';
+                            if (Math.abs(deltaX) >= 0.05) {
+                                event.handleObj.handler.apply(this, [event, deltaX > 0 ? 'right' : 'left']);
+                            }
+                        }
+                    }
+                };
+
+
+                function ApalonSlider() {
+                    var self = this;
+
+                    self.lockSlider = false;
+                    self.$wrapper = $('#newslide_wrapper');
+                    self.$slider = $('#newslide');
+                    self.$slides = self.$slider.find('.slide_box');
+                    self.slidesCount = self.$slides.length;
+
+                    self.getSlidesCount = function () {
+                        return self.slidesCount;
+                    };
+                    self.getSliderWidth = function () {
+                        return self.getSlidesCount() * self.slideWidth
+                    };
+
+                    self.slideWidth = 400;
+                    self.slideScale = 1;
+                    self.slideSpeed = 500;
+                    self.slideLockTime = self.slideSpeed;
+
+                    self.getSlideWidth = function () {
+                        return Math.round(self.slideWidth * self.slideScale);
+                    };
+
+
+                    var currentSlide = Math.round(self.getSlidesCount() / 2);
+                    self.getCurrentSlide = function () {
+                        return currentSlide;
+                    };
+                    self.setCurrentSlide = function (value, force) {
+                        if (self.lockSlider && !force) {
+                            return;
+                        }
+                        self.lockSlider = true;
+                        setTimeout(function () {
+                            self.lockSlider = false;
+                        }, self.slideLockTime);
+
+                        currentSlide = value;
+                        self.initTransform();
+                    };
+
+
+                    self.initTransform = function () {
+                        var wrapperWidth = self.$wrapper.width(),
+                            sliderWidth = self.getSliderWidth(),
+                            slidesCount = self.getSlidesCount(),
+                            slideWidth = self.getSlideWidth(),
+                            counter = Math.round(slidesCount / 2);
+
+                        var translateWidth = (wrapperWidth - sliderWidth) / 2 - slideWidth * (self.getCurrentSlide() - counter);
+                        if (slidesCount % 2 == 0) {
+                            translateWidth += Math.round(slideWidth / 2);
+                        }
+                        self.$slider.css('transform', 'translate3d(' + translateWidth + 'px, 0, 0) scale(' + self.slideScale + ')');
+                        self.$slides.eq(self.getCurrentSlide() - 1).css({
+                            'transform': 'scale(' + (1 / self.slideScale) + ')',
+                            'z-index': 999
+                        });
+                    };
+
+                    self.swipeHandler = function (event, direction) {
+                        if (direction === 'right' || direction === 'left') {
+                            self.slide(direction);
+                        }
+                    };
+                    self.initSwipe = function () {
+                        self.$wrapper.swipe({
+                            allowPageScroll: 'vertical',
+                            swipeLeft: function () {
+                                self.slide('left');
+                            },
+                            swipeRight: function () {
+                                self.slide('right');
+                            },
+                            threshold: 50
+                        });
+                    };
+                    self.addClass = function (slideIndex) {
+                        self.$slides.eq(slideIndex).addClass('current');
+                    };
+                    self.removeClass = function (slideIndex) {
+                        self.$slides.eq(slideIndex).removeClass('current').removeAttr('style');
+                    };
+
+                    self.clickSlideTimeout = undefined;
+                    self.clickSlide = function () {
+                        var $this = $(this),
+                            clickedSlide = self.$slides.index($this) + 1;
+
+                        clearTimeout(self.clickSlideTimeout);
+                        if (self.getCurrentSlide() == clickedSlide) {
+                            // document.location.href = $this.attr('data-url');
+                        } else {
+                            var direction = self.getCurrentSlide() < clickedSlide ? 'left' : 'right';
+                            var nextSlide = function () {
+                                if (self.getCurrentSlide() !== clickedSlide) {
+                                    self.slide(direction, true);
+                                    self.clickSlideTimeout = setTimeout(nextSlide, self.slideSpeed);
+                                }
+                            };
+                            nextSlide();
+                        }
+                    };
+
+                    self.slide = function (direction, force, number) {
+                        number = number || 1;
+                        var slideIndex = self.getCurrentSlide();
+                        self.removeClass(slideIndex - 1);
+
+                        if (direction === 'left' && slideIndex < self.getSlidesCount()) {
+                            slideIndex += number;
+                        } else if (direction === 'right' && slideIndex > 1) {
+                            slideIndex -= number;
+                        } else {
+                            return false;
+                        }
+                        self.setCurrentSlide(slideIndex);
+                        self.addClass(slideIndex - 1);
+                        self.lockSlider = false;
+                    };
+
+
+                    self.init = function () {
+                        self.initTransform();
+                        $(window).resize(self.initTransform);
+
+                        self.$slider.css('width', self.getSliderWidth());
+                        self.$slides.find('a').on('click', function (e) {
+                            e.stopPropagation();
+                        });
+
+                        self.$slides.on('click', self.clickSlide);
+                        $(document).bind('keyup', function (event) {
+                            switch (event.keyCode) {
+                                case 37:
+                                    self.slide('right'); // left
+                                    break;
+                                case 39:
+                                    self.slide('left'); // right
+                                    break;
+                            }
+                        });
+                    };
+                }
+
+                var slider = new ApalonSlider();
+                var windows = screen.width;
+                if (windows > 768) {
+                    slider.slideWidth = 400;
+                }
+                else {
+                    slider.slideWidth = 270;
+                }
+
+
+                window.ApalonSlider = slider;
+                slider.slideScale = 0.85;
+                slider.slideSpeed = 500;
+                slider.init();
+                $(function () {
+                    slider.initSwipe();
+                    setTimeout(function () {
+                        $('#newslide').css('visibility', 'visible');
+                    }, slider.slideSpeed + 100);
+                });
+            })(jQuery);
+        </script>
+
+
+        <div class="container top-boxer">
+            <h2 class="careers_hdr"><span>Achievements</span></h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
+
+    </header>
+
+
+{% endblock %}
+
+{% block body %}
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+
+{% block javascripts %}
+
+    {% javascripts '@jquery' '@bootstrap_js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script type="text/javascript" src="{{ asset('js/jquery.easing.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.touchSwipe.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/core.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.scrollify.min.js') }}"></script>
+
+
+{% endblock %}
+</body>
 </html>

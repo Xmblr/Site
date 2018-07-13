@@ -1,27 +1,33 @@
-$(function() {
-	
-	$(".panel").css({
-		"height":$(window).height()
-	});
-	var timer;
+var windows = screen.width;
+if (windows > 1200) {
+    $(function () {
 
-	$(window).resize(function() {
-		clearTimeout(timer);
-		timer = setTimeout(function() {
-			$(".panel").css({
-				"height":$(window).height()
-			});
-		},40);
-	});
+        $(".panel").css({
+            "height": $(window).height()
+        });
+        var timer;
 
-	$.scrollify({
-		section:".panel",
-		offset: 0
-	});
-	
+        $(window).resize(function () {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                $(".panel").css({
+                    "height": $(window).height()
+                });
+            }, 40);
+        });
 
-	$(".scroll").click(function(e) {
-		e.preventDefault();
-		$.scrollify("move",$(this).attr("href"));
-	});
-});
+        $.scrollify({
+            section: ".panel",
+            offset: 0
+        });
+
+
+        $(".scroll").click(function (e) {
+            e.preventDefault();
+            $.scrollify("move", $(this).attr("href"));
+        });
+    });
+}
+else {
+
+}

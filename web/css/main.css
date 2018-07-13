@@ -73,7 +73,7 @@ dd {
 	padding:0.6em 0 0.9em 0;
 }
 p {
-	font-size:1.9em;
+	font-size:3vw;
 	padding:0.4em 0 0.4em 0;
 }
 a:link,
@@ -151,9 +151,14 @@ header {
 	height:100vh;
 	border-bottom:1px solid #666;
 }
+
+@media (max-width: 1200px) {
+	.panel {
+		height: auto;
+	}
+}
 .one {
-	background: #65c2cf;
-	background:hsl(184,65%,49%);
+	background: white;
 	text-align:center;
 }
 .two {
@@ -204,8 +209,17 @@ pre {
 		width:100%;
 
 	}
-	h1,h2,h3,p,pre,dl {
-		margin-left:30px;
-		margin-right:30px;
+
+	.two h2, .three h2, .four h2, .five h2 {
+		padding: 25px 0px 0px 0px;
+	}
+
+	.header-desktop {
+		display: none;
 	}
 }
+
+@media (min-width:960px) {
+	.contacts-header {display: none;}
+}
+
