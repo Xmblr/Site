@@ -885,7 +885,7 @@ section {
 }
 
 .page-loader .page-loader-body:before {
-    content: 'BRAVE THEME';
+    content: 'FABROS';
     display: block;
     margin-bottom: 26px;
     font-family: "Montserrat", sans-serif;
@@ -4645,13 +4645,13 @@ h6.box-info-title,
     white-space: pre-wrap;
 }
 
-@media (max-width:960px) {
+@media (max-width:992px) {
     .header-desktop {
         display: none;
     }
 }
 
-@media (min-width:960px) {
+@media (min-width:992px) {
     .contacts-header {
         display: none;
     }
@@ -18146,7 +18146,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 }
 
 .breadcrumbs-custom-wrap .rd-navbar-wrap {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -19128,8 +19128,8 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 @media (min-width: 1800px) {
     .rd-navbar-static .rd-navbar-inner,
     .rd-navbar-fullwidth .rd-navbar-inner {
-        padding-left: 70px;
-        padding-right: 70px;
+        /*padding-left: 70px;*/
+        /*padding-right: 70px;*/
     }
 }
 
@@ -19611,6 +19611,29 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
     transform: translateY(-100%);
 }
 
+
+.rd-navbar-static.rd-navbar--is-stuck {
+    top: -60px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+
+.rd-navbar-static.rd-navbar--is-stuck:hover {
+    top: 0px;
+}
+
+
+.rd-navbar-fullwidth.rd-navbar--is-stuck {
+    top: -60px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.rd-navbar-fullwidth.rd-navbar--is-stuck:hover {
+    top: 0px;
+}
+
 .rd-navbar-static.rd-navbar--is-clone.rd-navbar--is-stuck,
 .rd-navbar-fullwidth.rd-navbar--is-clone.rd-navbar--is-stuck {
     transform: translateY(0%);
@@ -19621,7 +19644,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 .rd-navbar-fullwidth.rd-navbar--is-clone {
     position: fixed;
     left: 0;
-    top: 0;
+    /*top: 0;*/
     right: 0;
     z-index: 999;
     background: #ffffff;
@@ -19737,7 +19760,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
     bottom: 0;
     left: 0;
     right: 100%;
-    /*height: 3px;*/
+    height: 0px;
     content: "";
     display: inline-block;
     opacity: 0;
@@ -19748,6 +19771,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 .rd-navbar-static .rd-navbar-nav > li > a:hover:before {
     right: 0;
     opacity: 1;
+    height: 3px;
 }
 
 .rd-navbar-static .rd-navbar-nav > li.focus > a:before, .rd-navbar-static .rd-navbar-nav > li.opened > a:before {
@@ -20564,7 +20588,7 @@ html.rd-navbar-fixed-linked .page {
 
 .breadcrumbs-custom-wrap .rd-navbar-default .rd-navbar,
 .fullwidth-page .rd-navbar-default .rd-navbar {
-    background: transparent;
+    background: #6f42c1;
 }
 
 .breadcrumbs-custom-wrap .rd-navbar-default .rd-navbar:before,
@@ -29662,3 +29686,46 @@ img.mfp-img {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 2000;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    overflow: auto;
+}
+
+.popup-confirm {
+    top: 25%;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    margin: auto;
+    width: 85%;
+    min-width: 320px;
+    max-width: 600px;
+    position: absolute;
+    padding: 15px 20px;
+    border: 1px solid #383838;
+    background: #fefefe;
+    z-index: 10000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+}

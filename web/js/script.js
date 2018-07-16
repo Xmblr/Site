@@ -1,3 +1,12 @@
+
+function closeFunction() {
+    var activeMenu = document.getElementById("active");
+    activeMenu.classList.remove("active");
+    var toggle = document.getElementById("toggle");
+    toggle.classList.remove("active");
+}
+
+
 /**
  * Global variables
  */
@@ -690,8 +699,8 @@ $document.ready(function () {
      * Page loader
      * @description Enables Page loader
      */
-    if (plugins.pageLoader.length > 0) {
-        $window.on("load", function () {
+    // if (plugins.pageLoader.length > 0) {
+    //     $window.on("load", function () {
             var loader = setTimeout(function () {
                 // plugins.pageLoader.addClass("loaded");
                 plugins.pageLoader.fadeOut(500, function(){
@@ -700,8 +709,8 @@ $document.ready(function () {
 
                 $window.trigger("resize");
             }, 1000);
-        });
-    }
+        // });
+    // }
 
     /**
      * validateReCaptcha

@@ -73,7 +73,6 @@ dd {
 	padding:0.6em 0 0.9em 0;
 }
 p {
-	font-size:3vw;
 	padding:0.4em 0 0.4em 0;
 }
 a:link,
@@ -157,31 +156,6 @@ header {
 		height: auto;
 	}
 }
-.one {
-	background: white;
-	text-align:center;
-}
-.two {
-	background:#e14456;
-	background:hsl(350,92%,59%);
-
-}
-.three {
-	background:#6dcb94;
-	background:hsl(158,58%,52%);
-}
-.four {
-	background:#ec8200;
-	background:hsl(28,100%,52%);
-}
-.five {
-	background:#64a0d4;
-	background:hsl(200,60%,55%);
-}
-.inner {
-	width:960px;
-	margin:0 auto;
-}
 pre {
 	background:rgba(0,0,0,0.2);
 	padding:2em 0 2em 0;
@@ -217,9 +191,5 @@ pre {
 	.header-desktop {
 		display: none;
 	}
-}
-
-@media (min-width:960px) {
-	.contacts-header {display: none;}
 }
 

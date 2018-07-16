@@ -1,5 +1,5 @@
 var windows = screen.width;
-if (windows > 1200) {
+if (windows > 1025) {
     $(function () {
 
         $(".panel").css({

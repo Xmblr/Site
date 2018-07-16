@@ -1,17 +1,17 @@
 {% extends '@ApplicationApp/layout.html.twig' %}
 
-
 {% block body %}
-    <div class="row" style="padding-bottom: 3%;">
-        <div class="container-fluid" style="margin-top: 3%;">
+    <div id="overlay">
+    <div class="popup-confirm" style="max-width: 500px;">
+        <div class="section bg-gray-light container-fluid">
+            <h2 class="modal-title" style="color: black; text-align: center;">Thanks</h2>
 
             {% for type, messages in app.session.flashBag.all %}
                 {% for message in messages %}
                     <span class="{{ type }}">
-                        <h4 class="confirm col-md-6 col-md-push-3">
-                            {{ message }}
-                            Сейчас Вас перенаправят на предыдущую страницу.
-                        </h4>
+                        <p style="color: black; text-align: center;">
+                            Now you will be redirected to the previous page
+                        </p>
                         <script>
 
                             var oldURL = document.referrer;
@@ -21,9 +21,113 @@
                     </span>
                 {% endfor %}
             {% endfor %}
-
+        </div>
 
         </div>
     </div>
+
+
+    <section class="panel two" data-section-name="two" id="about"
+             style="background-image: url('/images/office.png'); background-size: cover;">
+
+        <div class="container">
+            <div class="col-md-8" style="padding-top: 10%; padding-bottom: 10%;">
+                <h2 style="color: white;">About Us</h2>
+                <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel three" data-section-name="three" id="products"
+             style="background-image: url('/images/products.png'); background-size: cover;">
+        <div class="container">
+            <div class="col-md-8" style="padding-top: 10%; padding-bottom: 10%;">
+                <h2 style="color: #6f42c1;">Fabros Products</h2>
+                <p style="color: #6f42c1;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel four" data-section-name="four" id="career"
+             style="background-image: url('/images/people.png'); background-size: cover;">
+        <div class="container">
+            <div class="col-md-8" style="padding-top: 10%; padding-bottom: 10%;">
+                <h2 style="color: #FFD700;">Career in Fabros</h2>
+                <p style="color: #FFD700;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <a class="button button-xs button-default-outline button-nina" href="#win3"
+                   style="color: #FFD700; margin-top: 10px;"><span
+                            style="transition: opacity 0.22s 0s, transform 0.22s 0s, color 0.22s;">A</span><span
+                            style="transition: opacity 0.22s 0.03s, transform 0.22s 0.03s, color 0.22s;">d</span><span
+                            style="transition: opacity 0.22s 0.09s, transform 0.22s 0.09s, color 0.22s;">d</span><span
+                            style="transition: opacity 0.22s 0.12s, transform 0.22s 0.12s, color 0.22s;"></span><span
+                            style="transition: opacity 0.22s 0.15s, transform 0.22s 0.15s, color 0.22s;">a</span><span
+                            style="transition: opacity 0.22s 0.18s, transform 0.22s 0.18s, color 0.22s;">n</span><span
+                            style="transition: opacity 0.22s 0.21s, transform 0.22s 0.21s, color 0.22s;"></span><span
+                            style="transition: opacity 0.22s 0.24s, transform 0.22s 0.24s, color 0.22s;">a</span><span
+                            style="transition: opacity 0.22s 0.27s, transform 0.22s 0.27s, color 0.22s;">p</span><span
+                            style="transition: opacity 0.22s 0.3s, transform 0.22s 0.3s, color 0.22s;">p</span><span
+                            style="transition: opacity 0.22s 0.3s, transform 0.22s 0.3s, color 0.22s;">l</span><span
+                            style="transition: opacity 0.22s 0.3s, transform 0.22s 0.3s, color 0.22s;">y</span><span
+                            class="button-original-content"
+                            style="transition: background 0.22s, color 0.22s, transform 0.22s 0.33s;">Add an apply</span></a>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="panel five" data-section-name="five" id="contacts"
+             style="background-image: url('/images/rivera.png'); background-size: cover;">
+        <div class="container">
+            <div class="col-md-8" style="padding-top: 10%; padding-bottom: 10%;">
+                <h2 style="color: #6f42c1; ">Contacts</h2>
+                <p style="color: #6f42c1; font-weight: 600;">Belarus, Minsk, Pobediteley, 106-300</br>
+                    <a href="tel:+375447770000" style="color: #6f42c1; font-weight: 600;">+375 (44) 777 0000</a></br>
+                    mail@fabros.com
+                </p>
+            </div>
+        </div>
+        <div class="container-fluid footer-mobile" style="background-color: black; position: absolute; bottom: 0;">
+            <div class="container">
+                <div class="rd-navbar-brand" style="display: inline-block; vertical-align: middle;"><a
+                            class="brand-name" href="/">FABROS</a></div>
+                <ul class="rd-navbar-nav" style="display: inline-block; vertical-align: middle; margin-left: 20px;">
+                    <li class="rd-navbar--has-dropdown"
+                        style="display: inline-block; color: white; margin-right: 10px; font-size: 13px;"><a
+                                href="#terms">Terms of use</a>
+                    </li>
+                    <li class="rd-navbar--has-dropdown"
+                        style="display: inline-block; color: white; margin-right: 10px; font-size: 13px;"><a
+                                href="#privacy">Privacy Policy</a>
+                    </li>
+                    <li class="rd-navbar--has-dropdown"
+                        style="display: inline-block; color: white; margin-right: 10px; font-size: 13px;"><a
+                                href="#cookie">Cookie Policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <script type="text/javascript">
+        var delay_popup = 3000;
+        setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+    </script>
+
+
 
 {% endblock %}

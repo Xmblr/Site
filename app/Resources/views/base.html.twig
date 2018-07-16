@@ -10,55 +10,114 @@
             <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
         {% endstylesheets %}
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/fddb9b6_part_1.css') }}"/>
-        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css') }}"/>
-        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/style.css') }}"/>
-        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/style-1.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/main.css?v=1.1') }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/style.css?v=1.4') }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/style-1.css?v=1.3') }}"/>
         <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/animate.css') }}"/>
-        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('font/font-awesome/css/font-awesome.min.css') }}"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="{{ asset('css/popup.css?v=1.1') }}"/>
+        <link rel="stylesheet" type="text/css" media="screen"
+              href="{{ asset('font/font-awesome/css/font-awesome.min.css') }}"/>
     {% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     <script type="text/javascript" src="{{ asset('js/jquery-1.10.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/common.js') }}"></script>
 </head>
 <body>
-
+<div class="page-loader">
+    <div class="page-loader-body">
+        <div class="preloader-wrapper big active">
+            <div class="spinner-layer spinner-blue">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-red">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-yellow">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="spinner-layer spinner-green">
+                <div class="circle-clipper left">
+                    <div class="circle"></div>
+                </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-clipper right">
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% block header %}
+
 
     <header class="section page-header breadcrumbs-custom-wrap panel one" data-section-name="one" id="home">
         <!-- RD Navbar-->
-        <div class="rd-navbar-wrap rd-navbar-default" style="height: 77.6px;">
-            <nav class="rd-navbar rd-navbar-original rd-navbar-static" data-layout="rd-navbar-fixed"
-                 data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
-                 data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fullwidth"
-                 data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-md-stick-up-offset="2px"
-                 data-lg-stick-up-offset="2px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true"
-                 data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+        <div class="rd-navbar-wrap rd-navbar-default">
+            <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+                 data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed"
+                 data-lg-layout="rd-navbar-fullwidth" data-lg-device-layout="rd-navbar-fixed"
+                 data-xl-layout="rd-navbar-static" data-md-stick-up-offset="2px" data-lg-stick-up-offset="2px"
+                 data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true"
+                 data-xl-stick-up="true" data-xxl-stick-up="true">
+
                 <div class="rd-navbar-inner container">
                     <!-- RD Navbar Panel-->
                     <div class="rd-navbar-panel">
                         <!-- RD Navbar Toggle-->
-                        <button class="rd-navbar-toggle toggle-original" data-rd-navbar-toggle=".rd-navbar-nav-wrap">
+                        <button id="toggle" class="rd-navbar-toggle toggle-original"
+                                data-rd-navbar-toggle=".rd-navbar-nav-wrap">
                             <span></span></button>
                         <!-- RD Navbar Brand-->
                         <div class="rd-navbar-brand"><a class="brand-name" href="/">FABROS</a></div>
                     </div>
                     <div class="rd-navbar-aside-right">
-                        <div class="rd-navbar-nav-wrap toggle-original-elements">
+                        <div id="active" class="rd-navbar-nav-wrap toggle-original-elements">
                             <!-- RD Navbar Nav-->
                             <ul class="rd-navbar-nav">
-                                <li class="rd-navbar--has-dropdown active"><a href="#home">Home</a>
+                                <li class="rd-navbar--has-dropdown active" style="display: none;"><a
+                                            onclick="closeFunction()" href="#home">Home</a>
                                 </li>
-                                <li class="rd-navbar--has-dropdown"><a href="#about">About</a>
+                                <li class="rd-navbar--has-dropdown"><a onclick="closeFunction()" href="#home">Home</a>
                                 </li>
-                                <li class="rd-navbar--has-dropdown"><a href="#products">Products</a>
+                                <li class="rd-navbar--has-dropdown"><a onclick="closeFunction()" href="#about">About</a>
                                 </li>
-                                <li class="rd-navbar--has-dropdown"><a href="#career">Career</a>
+                                <li class="rd-navbar--has-dropdown"><a onclick="closeFunction()" href="#products">Products</a>
                                 </li>
-                                <li class="rd-navbar--has-dropdown"><a href="#contacts">Contacts</a>
+                                <li class="rd-navbar--has-dropdown"><a onclick="closeFunction()"
+                                                                       href="#career">Career</a>
                                 </li>
+                                <li class="rd-navbar--has-dropdown"><a onclick="closeFunction()" href="#contacts">Contacts</a>
+                                </li>
+
                             </ul>
                             <a class="button button-xs button-default-outline button-nina contacts-header"
-                               href="/" target="_blank"><span
+                               href="/" target="_blank" style="margin-left: 16px;"><span
                                         style="transition: opacity 0.22s 0s, transform 0.22s 0s, color 0.22s;">Н</span><span
                                         style="transition: opacity 0.22s 0.03s, transform 0.22s 0.03s, color 0.22s;">а</span><span
                                         style="transition: opacity 0.22s 0.09s, transform 0.22s 0.09s, color 0.22s;"></span><span
@@ -91,8 +150,10 @@
                             {#<button class="rd-search-form-submit mdi mdi-magnify"></button>#}
                             {#</form>#}
                             {#</div>#}
-                            <p class="contacts-header" style="color: #fff; font-weight: 600; padding-left: 10px;">Belarus, Minsk, Pobediteley, 106-300</br>
-                                <a href="tel:+375447770000" style="color: #fff; font-weight: 600;">+375 (44) 777 0000</a></br>
+                            <p class="contacts-header" style="color: #fff; font-weight: 600; padding-left: 10px;">
+                                Belarus, Minsk, Pobediteley, 106-300</br>
+                                <a href="tel:+375447770000" style="color: #fff; font-weight: 600;">+375 (44) 777
+                                    0000</a></br>
                                 mail@fabros.com
                             </p>
                             <a class="button button-xs button-default-outline button-nina header-desktop"
@@ -119,13 +180,301 @@
         <!-- Breadcrumbs-->
 
 
-
         <div class="apps">
             <div class="boxer_slider" id="newslide_wrapper">
                 <div class="new_slider new_slider_transform" id="newslide"
                      style="transform: translate3d(-4406.5px, 0px, 0px) scale(0.85); width: 7000px; visibility: visible;">
 
 
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/yatzy_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+
+                        <img src="/images/yatzy_feat.png"/>
+                        {#<div style="text-align: center;">#}
+                        {#<img src="/images/star.png"/>#}
+                        {#<img src="/images/star.png"/>#}
+                        {#<img src="/images/star.png"/>#}
+                        {#<img src="/images/star.png"/>#}
+                        {#<img src="/images/star.png"/>#}
+                            {#<span style="font-size: 25px; line-height: 25px; margin-left: 5px;">5,0</span>#}
+                            {#<div style="font-size: 25px; line-height: 25px; margin-left: 5px;">More than 5 mln</div>#}
+                        {#</div>#}
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/farkle_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/farkle_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/connect_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/connect_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/colors_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/colors_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/lines_feat.png'); background-size: contain;">#}
+
+                        {#</div>#}
+                        <img src="/images/lines_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/yatzy_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+
+                        <img src="/images/yatzy_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/farkle_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/farkle_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/connect_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/connect_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/colors_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/colors_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/lines_feat.png'); background-size: contain;">#}
+
+                        {#</div>#}
+                        <img src="/images/lines_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/yatzy_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+
+                        <img src="/images/yatzy_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/farkle_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/farkle_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/connect_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/connect_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/colors_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/colors_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/lines_feat.png'); background-size: contain;">#}
+
+                        {#</div>#}
+                        <img src="/images/lines_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/yatzy_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+
+                        <img src="/images/yatzy_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/farkle_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/farkle_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/connect_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/connect_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/colors_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/colors_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/lines_feat.png'); background-size: contain;">#}
+
+                        {#</div>#}
+                        <img src="/images/lines_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/yatzy_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+
+                        <img src="/images/yatzy_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/farkle_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/farkle_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/connect_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/connect_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/colors_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/colors_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/lines_feat.png'); background-size: contain;">#}
+
+                        {#</div>#}
+                        <img src="/images/lines_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/yatzy_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+
+                        <img src="/images/yatzy_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/farkle_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/farkle_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/connect_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/connect_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/colors_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/colors_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/lines_feat.png'); background-size: contain;">#}
+
+                        {#</div>#}
+                        <img src="/images/lines_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/yatzy_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+
+                        <img src="/images/yatzy_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/farkle_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/farkle_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/connect_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/connect_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/colors_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/colors_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/lines_feat.png'); background-size: contain;">#}
+
+                        {#</div>#}
+                        <img src="/images/lines_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/yatzy_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+
+                        <img src="/images/yatzy_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/farkle_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/farkle_feat.png"/>
+                    </div>
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/connect_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/connect_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/colors_feat.png'); background-size: contain;">#}
+                        {#</div>#}
+                        <img src="/images/colors_feat.png"/>
+                    </div>
+
+                    <div class="slide_box box new_slider_transform">
+                        {#<div class="top_back"#}
+                        {#style="background-image: url('/images/lines_feat.png'); background-size: contain;">#}
+
+                        {#</div>#}
+                        <img src="/images/lines_feat.png"/>
+                    </div>
                     <div class="slide_box box new_slider_transform">
                         {#<div class="top_back"#}
                         {#style="background-image: url('/images/yatzy_feat.png'); background-size: contain;">#}
@@ -165,17 +514,17 @@
             </div>
         </div>
 
-        <script type="text/javascript">
-            $('button#choose_apps_platform').on('click', function(){
-                var isOsCookie = false;
-                if (!isOsCookie) {
-                    createCookie('apps_for', 'all', 7);
-                } else {
-                    eraseCookie('apps_for');
-                }
-                window.location = '';
-            });
-        </script>
+        {#<script type="text/javascript">#}
+            {#$('button#choose_apps_platform').on('click', function () {#}
+                {#var isOsCookie = false;#}
+                {#if (!isOsCookie) {#}
+                    {#createCookie('apps_for', 'all', 7);#}
+                {#} else {#}
+                    {#eraseCookie('apps_for');#}
+                {#}#}
+                {#window.location = '';#}
+            {#});#}
+        {#</script>#}
 
 
         <script>
@@ -211,8 +560,14 @@
                     self.getSliderWidth = function () {
                         return self.getSlidesCount() * self.slideWidth
                     };
+                    var windows = screen.width;
+                    if (windows > 1025) {
+                        self.slideWidth = 400;
+                    }
+                    else {
+                        self.slideWidth = 270;
+                    }
 
-                    self.slideWidth = 400;
                     self.slideScale = 1;
                     self.slideSpeed = 500;
                     self.slideLockTime = self.slideSpeed;
@@ -345,7 +700,7 @@
 
                 var slider = new ApalonSlider();
                 var windows = screen.width;
-                if (windows > 768) {
+                if (windows > 1025) {
                     slider.slideWidth = 400;
                 }
                 else {
@@ -366,11 +721,14 @@
             })(jQuery);
         </script>
 
-
         <div class="container top-boxer">
             <h2 class="careers_hdr"><span>Achievements</span></h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.</p>
 
         </div>
 
@@ -393,14 +751,14 @@
 
 {% block javascripts %}
 
-    {% javascripts '@jquery' '@bootstrap_js' %}
-    <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
+    {#{% javascripts '@jquery' '@bootstrap_js' %}#}
+    {#<script type="text/javascript" src="{{ asset_url }}"></script>#}
+    {#{% endjavascripts %}#}
     <script type="text/javascript" src="{{ asset('js/jquery.easing.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js?v=1.1') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.touchSwipe.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/core.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/core.min.js?v=1.1') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/script.js?v=1.5') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.scrollify.min.js') }}"></script>
 
 
