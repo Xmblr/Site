@@ -193,3 +193,20 @@ pre {
 	}
 }
 
+
+/*CSLDERS*/
+.icons {
+	width: 100%;
+	overflow: hidden;
+}
+.container-logo {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+
+
+
+

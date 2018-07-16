@@ -136,12 +136,12 @@
 				},
 				keyHandler:function(e) {
 					e.preventDefault();
-					if(e.keyCode==38) {
+					if( (e.keyCode==38) || (e.keyCode==33 ) )  {
 						if(index>0) {
 							index--;
 						}
 						animateScroll(index);
-					} else if(e.keyCode==40) {
+					} else if((e.keyCode==40) || (e.keyCode==34 ) || (e.keyCode==32 )) {
 						if(index<heights.length-1) {
 							index++;
 						}
